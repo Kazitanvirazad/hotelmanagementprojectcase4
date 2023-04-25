@@ -1,0 +1,31 @@
+{
+  "name": "project-version-5",
+  "version": "5.0.0",
+  "description": "Hotel management project case4",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha tests",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "kazi tanvir azad",
+  "contributors": [
+    "Renu",
+    "Nishat",
+    "Neelmani",
+    "Shameer",
+    "Srija"
+  ],
+  "license": "Publicis Sapient Training Mini Project",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15"
+  }
+}

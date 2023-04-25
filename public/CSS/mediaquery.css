@@ -1,0 +1,147 @@
+/* media queries  */
+
+  @media (max-width:991px){
+  
+    header{
+      padding:2rem;
+    }
+  
+    section{
+      padding:2rem;
+    }
+    .about p{
+      font-size: 3rem;
+      color: #333;
+  
+    }
+    .heading-about h2{
+      font-size: 4rem;
+      padding-left: 10%;
+    }
+  
+    .heading-about h5{
+      font-size: 3rem;
+      padding-left: 10%;
+    }
+  }
+  
+  @media (max-width:768px){
+  
+    #menu-bar{
+      display: initial;
+    }
+  
+    header .navbar{
+      position: absolute;
+      top:100%; right:0; left: 0;
+      background: #333;
+      border-top: .1rem solid rgba(255,255,255,.2);
+      padding:1rem 2rem;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    header .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  
+    header .navbar a{
+      display: block;
+      border-radius: .5rem;
+      padding:1.5rem;
+      margin:1.5rem 0;    
+      background:#222;
+    }
+    .about .container {
+      flex-direction: column;
+    }
+    .about p{
+      margin: 50px 0 0 0;
+      font-size: 2rem;
+      color: #333;
+    }
+    .heading-about h5{
+      font-size: 2rem;
+    }
+    .rooms .room{
+      flex-direction: column;
+  }
+  
+  }
+  
+  
+  @media (max-width:450px){
+  
+    html{
+      font-size: 50%;
+    }
+  
+    .heading span{
+      font-size: 2.5rem;
+    }
+    .heading-about h5{
+      padding-left: 30%;
+    }
+    .heading-about h2{
+      font-size: 4rem;
+      text-align: center;
+      padding-left: 40%;
+    }
+    .about p{
+      margin: 50px 0 0 0;
+      font-size: 3rem;
+      color: #333;
+      padding-left: 30%;
+    }
+    .btn1{
+      width: 40%;
+      height: 15%;
+    }
+    .contact-header{
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+    .contact-item{
+      font-size: 1.8rem;
+    }
+   
+  }
+  /* media query for footer */
+
+  @media(min-width: 1170px){
+        .footer{
+            text-align: left;
+        }
+        .footer-container{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-content: center;
+          grid-gap: 50px;
+      }
+       
+      .contact-section{
+        padding-left: 20%;
+      }
+      .question-section{
+        padding-left: 40%;
+      }
+      
+      .contact-item{
+            display: grid;
+            grid-template-columns:10% 90%;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        html{
+          font-size: 55%;
+        }
+        
+  }
+    
+  
+  
+  
+  
+  
+  
+  
+  

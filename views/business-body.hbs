@@ -1,0 +1,91 @@
+{{>room-header}}
+
+
+<section id="container">
+    <div class="heart" style="text-align: center;">
+        <h1 class="h-1">Business Suite</h1>
+
+        <button class="btn">Make a Booking
+        </button>
+        <button class="btn">View Booking</button>
+    </div>
+    <div class="box-container" style="background-color: #ffa500">
+        <div>
+            <div class="box form" id="row" style="background-color: #ffa500;">
+
+                <!-- <div class="image" >
+                            <img src="./book-img.svg" alt="" width="100rem" height="100rem">
+                        </div> -->
+
+                <form action="">
+                    <span class="inputBox">
+                        <h3>Room Type</h3>
+                        <select name="room" id="room">
+                            <option value="choose">--choose room--</option>
+                            <option value="LuxurySuite">Luxury Suite</option>
+                            <option value="maharajasuite">Maharaja Suite</option>
+                            <option value="Premiumsuite">Premium Suite</option>
+                            <option value="Businesssuite ">Bussiness Suite</option>
+                        </select>
+
+                    </span>
+                    <span class="inputBox">
+                        <h3>where to</h3>
+                        <input type="text" placeholder="place name">
+                    </span>
+                    <span class="inputBox">
+                        <h3>how many</h3>
+                        <input type="number" placeholder="number of guests">
+                    </span>
+                    <span class="inputBox">
+                        <h3>check-in</h3>
+                        <input type="date">
+                    </span>
+                    <span class="inputBox">
+                        <h3>check-out</h3>
+                        <input type="date">
+                    </span>
+                    <input type="submit" class="btn" value="book now">
+                </form>
+
+            </div>
+
+        </div>
+        <div class="box image">
+
+            <img src="images/business1.jpg" alt="luxury-image" height="200rem" width="200rem">
+            <p class="para"><b class="bold-heading">Services Offer in this Booking</b></p>
+            <p class="para"><b class="bold">Number of bed :</b> single</p>
+            <p class="para"><b class="bold">A/C :</b> Yes</p>
+            <p class="para"><b class="bold">Room Price :</b> Rs 900/-</p>
+        </div>
+        <div class="box image">
+
+            <img src="images/business2.jpg" alt="luxury-image" height="200rem" width="200rem">
+            <p class="para"><b class="bold-heading">Services Offer in this Booking</b></p>
+            <p class="para"><b class="bold">Number of bed</b> - Double</p>
+            <p class="para"><b class="bold">A/C :</b> Yes</p>
+            <p class="para"><b class="bold">Room Price :</b> Rs 1200/-</p>
+        </div>
+        <div class="box image">
+
+            <img src="images/business3.jpg" alt="luxury-image" height="200rem" width="200rem">
+            <p class="para"><b class="bold-heading">Services Offer in this Booking</b></p>
+            <p class="para"><b class="bold">Number of bed :</b> Double</p>
+            <p class="para"><b class="bold">A/C :</b> Yes</p>
+            <p class="para"><b class="bold">Room Price :</b> Rs 1000/-</p>
+        </div>
+        <div class="box image">
+
+            <img src="images/business5.jpeg" alt="luxury-image" height="200rem" width="200rem">
+            <p class="para"><b class="bold-heading">Services Offer in this Booking</b></p>
+            <p class="para"><b class="bold">Number of bed :</b> Double</p>
+            <p class="para">with loby and stairs</p>
+            <p class="para"><b class="bold">A/C :</b> Yes</p>
+            <p class="para"><b class="bold">Room Price :</b> Rs 1400/-</p>
+        </div>
+    </div>
+</section>
+
+
+{{>footer}}

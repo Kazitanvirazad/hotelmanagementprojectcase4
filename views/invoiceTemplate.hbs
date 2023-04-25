@@ -1,0 +1,123 @@
+{{#if data}}
+<div class="form-div">
+    <table border="2px">
+        <tr>
+            <td class="heading" colspan="2">
+                <h3>The Cozy Cottage</h3>
+            </td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>Colva Beach, Goa India 562514</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>cozy_cottage@gmail.com</td>
+        </tr>
+        <tr>
+            <th>Contact:</th>
+            <td>9876564321</td>
+        </tr>
+    </table>
+
+    <table border="2px">
+        <tr>
+            <th>Invoice Number:</th>
+            <td id="invoice_number" colspan="3">{{generateInvoiceNumber data.data.book_id data.data.checkout}}</td>
+        </tr>
+        <tr>
+            <th>Booking No:</th>
+            <td id="book_id">{{data.data.book_id}}</td>
+            <th>Customer Id:</th>
+            <td id="cust_id">{{data.data.cust_id}}</td>
+        </tr>
+        <tr>
+            <th>Customer Name:</th>
+            <td colspan="3" id="cust_name">{{data.data.f_name}} {{data.data.l_name}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td colspan="3" id="address">{{data.data.street}}, {{data.data.city}}, {{data.data.state}},
+                {{data.data.zip}}</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td colspan="3" id="email">{{data.data.email}}</td>
+
+        </tr>
+        <tr>
+            <th>Phone:</th>
+            <td colspan="3" id="phone">{{data.data.phone}}</td>
+        </tr>
+        <tr>
+            <th>Payment Method:</th>
+            <td colspan="3" id="pay_methd">{{data.data.pay_methd}}</td>
+        </tr>
+        <tr>
+            <th>Checkin</th>
+            <td id="checkin">{{generateDate data.data.checkin}}</td>
+            <th>Checkout</th>
+            <td id="checkout">{{generateDate data.data.checkout}}</td>
+        </tr>
+
+    </table>
+    {{!--
+</div> --}}
+{{!-- <div class="form-div"> --}}
+    <table border="2px">
+        <tr>
+            <th>Room No</th>
+            <th>Stay Duration</th>
+            <th>Category</th>
+            <th>Room Rate</th>
+
+        </tr>
+        <tr id="invoice_details">
+            <td>{{data.data.room_num}}</td>
+            <td>{{data.data.stay_nights}}</td>
+            <td>{{data.data.category}}</td>
+            <td>{{data.data.room_rate}}</td>
+
+        </tr>
+        <tr>
+            <th colspan="2">Services</th>
+            <th colspan="2">Rate</th>
+        </tr>
+
+        {{#each data.service}}
+        <tr id="invoice_services">
+            <td colspan="2">{{this.servtype}}</td>
+            <td colspan="2">{{this.service_rate}}</td>
+        </tr>
+        {{/each}}
+
+        <tr>
+            <th>Total:</th>
+            <td colspan="2">Total service+(stay duration x room rate)</td>
+            <td id="grand_total">{{calculateGrandTotal data.data.service_total data.data.room_total}}</td>
+        </tr>
+        <tr>
+            <th>Tax %</th>
+            <td id="tax_perc">{{data.data.tax}}</td>
+            <td id="tax_amount" colspan="2">{{calculateTax data.data.service_total data.data.room_total data.data.tax}}
+            </td>
+        </tr>
+        <tr>
+            <th>Discount: %</th>
+            <td id="disc_perc">{{data.data.discount}}</td>
+            <td id="disc_amount" colspan="2">{{calculateDiscount data.data.service_total data.data.room_total
+                data.data.discount}}</td>
+
+        </tr>
+        <tr>
+            <th>Total Payable amount:</th>
+            <td id="total_payable" colspan="3">{{totalPayable data.data.service_total data.data.room_total data.data.tax
+                data.data.discount}}</td>
+        </tr>
+    </table>
+</div>
+{{else}}
+<h1>Something Went Wrong...</h1>
+<h3>Please Try again later</h3>
+
+{{/if}}
